@@ -89,7 +89,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'bass-clef',
-        defaultVideoUrl: 'https://www.youtube.com/embed/9Wq_jQ_J5q0',
+        defaultVideoUrl: 'https://www.youtube.com/embed/0XtsLT8EJaM',
+        videoWatchUrl: 'https://youtu.be/0XtsLT8EJaM',
         videoTitle: 'شرح تفاعلي: مفتاح فا الخط الرابع وأسماء النغمات',
         videoDescription: 'مقطع توضيحي لطريقة رسم مفتاح فا وتوزيع النغمات على الخطوط والفراغات والخطوط الإضافية بصرياً ونغمياً.',
         presentationOutline: [
@@ -207,7 +208,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'scales',
-        defaultVideoUrl: 'https://www.youtube.com/embed/5U7zB1qZgQw',
+        defaultVideoUrl: 'https://www.youtube.com/embed/uoDlAHRXjuU',
+        videoWatchUrl: 'https://youtu.be/uoDlAHRXjuU',
         videoTitle: 'شرح مقارن: سلم فا الكبير وسلم ري الصغير الهارموني',
         videoDescription: 'شرح صوتي وتطبيقي لكيفية تكوين السلمين وتحديد الدليل وأبعاد السلم الهارموني المميزة.',
         presentationOutline: [
@@ -318,7 +320,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'triads',
-        defaultVideoUrl: 'https://www.youtube.com/embed/n4yB3s_pXkI',
+        defaultVideoUrl: 'https://www.youtube.com/embed/4tQpf1F7h4g',
+        videoWatchUrl: 'https://youtu.be/4tQpf1F7h4g',
         videoTitle: 'شرح عملي: بناء التآلف الكبير والتآلف الصغير',
         videoDescription: 'توضيح قياس المسافات اللحنية (الثالثة الكبيرة والثالثة الصغيرة) وعزف نماذج تطبيقية للتآلفات.',
         presentationOutline: [
@@ -446,7 +449,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'mawlid-melody',
-        defaultVideoUrl: 'https://www.youtube.com/embed/FwF7j0u_7qU',
+        defaultVideoUrl: 'https://www.youtube.com/embed/u_Xy-DER0G8',
+        videoWatchUrl: 'https://youtu.be/u_Xy-DER0G8',
         videoTitle: 'تسجيل تراثي: أداء فن المولد العماني الجماعي',
         videoDescription: 'مشاهدة حية لأداء فن المولد في سلطنة عمان تبرز اصطفاف المنشدين وأسلوب المشيد والرديدة.',
         presentationOutline: [
@@ -554,7 +558,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'mawlid-melody',
-        defaultVideoUrl: 'https://www.youtube.com/embed/5a8bZkQGjEQ',
+        defaultVideoUrl: 'https://www.youtube.com/embed/vMFlpJn1ds8',
+        videoWatchUrl: 'https://youtu.be/vMFlpJn1ds8',
         videoTitle: 'تطبيق صوتي: نشيد يا نبي سلام عليك بالنمط التراثي',
         videoDescription: 'استماع وأداء تفاعلي لنشيد يا نبي سلام عليك مع عرض الكلمات والتقسيم الصوتي بين الفرد والمجموعة.',
         presentationOutline: [
@@ -661,7 +666,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'omani-instruments',
-        defaultVideoUrl: 'https://www.youtube.com/embed/PjRk8xT1N3I',
+        defaultVideoUrl: 'https://www.youtube.com/embed/rM5s-bHS41Y',
+        videoWatchUrl: 'https://youtu.be/rM5s-bHS41Y',
         videoTitle: 'وثائقي: الآلات الموسيقية الشعبية في سلطنة عمان',
         videoDescription: 'استعراض لطريقة صناعة طبل الرحماني والكاسر والبرغوم، وسماع أصواتها في الفنون الحية كالرزحة والعازي.',
         presentationOutline: [
@@ -788,7 +794,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'romantic-verdi',
-        defaultVideoUrl: 'https://www.youtube.com/embed/fGf7qW3K_vY',
+        defaultVideoUrl: 'https://www.youtube.com/embed/WYXNuGl2lJ4',
+        videoWatchUrl: 'https://youtu.be/WYXNuGl2lJ4',
         videoTitle: 'استكشاف روائع العصر الرومانسي والأوركسترا السيمفونية',
         videoDescription: 'جولة بصرية واستماع لأهم سمات الموسيقى الرومانسية، مقارنة بحجم الأوركسترا الكلاسيكية والآلات الجديدة.',
         presentationOutline: [
@@ -901,7 +908,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'romantic-verdi',
-        defaultVideoUrl: 'https://www.youtube.com/embed/b8rsOzPzYr8',
+        defaultVideoUrl: 'https://www.youtube.com/embed/e8coA7wgIis',
+        videoWatchUrl: 'https://youtu.be/e8coA7wgIis',
         videoTitle: 'مشهد مارش النصر المهيب من أوبرا عايدة لجوزيبي فيردي',
         videoDescription: 'تسجيل مسرحي حي لمشهد استقبال الجيش وعزف مارش النصر بالأبواق الفرعونية الشهيرة في أوبرا عايدة.',
         presentationOutline: [
@@ -1009,7 +1017,8 @@ export const CURRICULUM_UNITS: Unit[] = [
           },
         ],
         interactiveToolType: 'piano-practice',
-        defaultVideoUrl: 'https://www.youtube.com/embed/5a8bZkQGjEQ',
+        defaultVideoUrl: 'https://www.youtube.com/embed/oE5-5UzPuS8',
+        videoWatchUrl: 'https://youtu.be/oE5-5UzPuS8',
         videoTitle: 'درس عملي: قراءة النوتة وعزف مقطوعة موسيقية تطبيقية',
         videoDescription: 'إرشادات عملية واضحة لكيفية مسك آلة الميلوديكا واستخدام الأورغ وتطبيق أرقام الأصابع في العزف.',
         presentationOutline: [

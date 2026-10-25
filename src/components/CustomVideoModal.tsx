@@ -19,16 +19,16 @@ export function extractYouTubeEmbedUrl(url: string): string {
     return trimmed;
   }
 
-  // Standard watch URL: youtube.com/watch?v=VIDEO_ID
-  const watchMatch = trimmed.match(/[?&]v=([a-zA-Z0-9_-]{11})/);
-  if (watchMatch && watchMatch[1]) {
-    return `https://www.youtube.com/embed/${watchMatch[1]}`;
-  }
-
-  // Short URL: youtu.be/VIDEO_ID
-  const shortMatch = trimmed.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
+  // Short URL: youtu.be/VIDEO_ID or youtu.be/VIDEO_ID?si=...
+  const shortMatch = trimmed.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
   if (shortMatch && shortMatch[1]) {
     return `https://www.youtube.com/embed/${shortMatch[1]}`;
+  }
+
+  // Standard watch URL: youtube.com/watch?v=VIDEO_ID
+  const watchMatch = trimmed.match(/[?&]v=([a-zA-Z0-9_-]+)/);
+  if (watchMatch && watchMatch[1]) {
+    return `https://www.youtube.com/embed/${watchMatch[1]}`;
   }
 
   // Fallback to input if already formatted

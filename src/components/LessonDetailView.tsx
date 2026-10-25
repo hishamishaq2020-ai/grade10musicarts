@@ -13,7 +13,8 @@ import {
   Edit3,
   Lightbulb,
   Info,
-  AlertCircle
+  AlertCircle,
+  ExternalLink
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { LessonContent, Unit } from '../types/curriculum';
@@ -44,14 +45,29 @@ export const LessonDetailView: React.FC<LessonDetailViewProps> = ({
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
   const [submittedQuiz, setSubmittedQuiz] = useState(false);
 
-  // Load custom video URL if stored in localStorage
+  // Load official or custom video URL with auto-migration from previous placeholders
   useEffect(() => {
     const saved = localStorage.getItem(`custom_video_${lesson.id}`);
-    if (saved) {
+    const isOldPlaceholder = saved && (
+      saved.includes('9Wq_jQ_J5q0') ||
+      saved.includes('5U7zB1qZgQw') ||
+      saved.includes('n4yB3s_pXkI') ||
+      saved.includes('FwF7j0u_7qU') ||
+      saved.includes('PjRk8xT1N3I') ||
+      saved.includes('fGf7qW3K_vY') ||
+      saved.includes('b8rsOzPzYr8') ||
+      saved.includes('5a8bZkQGjEQ')
+    );
+
+    if (isOldPlaceholder) {
+      localStorage.removeItem(`custom_video_${lesson.id}`);
+      setCurrentVideoUrl(lesson.defaultVideoUrl);
+    } else if (saved) {
       setCurrentVideoUrl(saved);
     } else {
       setCurrentVideoUrl(lesson.defaultVideoUrl);
     }
+
     // Reset quiz when lesson changes
     setSelectedAnswers({});
     setSubmittedQuiz(false);
@@ -328,15 +344,29 @@ export const LessonDetailView: React.FC<LessonDetailViewProps> = ({
                 </div>
               </div>
 
-              {/* Edit Video link button */}
-              <button
-                onClick={() => setIsVideoModalOpen(true)}
-                className="flex items-center gap-1 text-[11px] font-medium text-amber-700 hover:text-amber-800 bg-amber-50 hover:bg-amber-100 px-2.5 py-1 rounded-lg transition-colors"
-                title="تعديل رابط الفيديو وتعيين رابط يوتيوب خاص بك"
-              >
-                <Edit3 className="w-3.5 h-3.5" />
-                <span>تعديل الرابط</span>
-              </button>
+              <div className="flex items-center gap-1.5">
+                {/* Direct Watch on YouTube button */}
+                <a
+                  href={lesson.videoWatchUrl || currentVideoUrl.replace('/embed/', '/watch?v=')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-[11px] font-semibold text-stone-600 hover:text-stone-900 bg-stone-100 hover:bg-stone-200 px-2.5 py-1 rounded-lg transition-colors"
+                  title="فتح المقطع في منصة يوتيوب مباشرة"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>فتح في يوتيوب</span>
+                </a>
+
+                {/* Edit Video link button */}
+                <button
+                  onClick={() => setIsVideoModalOpen(true)}
+                  className="flex items-center gap-1 text-[11px] font-medium text-amber-700 hover:text-amber-800 bg-amber-50 hover:bg-amber-100 px-2.5 py-1 rounded-lg transition-colors cursor-pointer"
+                  title="تعديل رابط الفيديو وتعيين رابط يوتيوب خاص بك"
+                >
+                  <Edit3 className="w-3.5 h-3.5" />
+                  <span>تعديل الرابط</span>
+                </button>
+              </div>
             </div>
 
             {/* Video Iframe Container */}
@@ -345,7 +375,8 @@ export const LessonDetailView: React.FC<LessonDetailViewProps> = ({
                 src={currentVideoUrl}
                 title={lesson.videoTitle}
                 className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               />
             </div>

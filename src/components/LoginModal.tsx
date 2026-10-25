@@ -271,7 +271,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
             <button
               type="button"
               onClick={() => handleQuickFill('student')}
-              className="text-amber-700 hover:text-amber-800 hover:underline font-medium"
+              className="text-amber-700 hover:text-amber-800 hover:underline font-medium cursor-pointer"
             >
               طالب تجريبي
             </button>
@@ -279,11 +279,19 @@ export const LoginModal: React.FC<LoginModalProps> = ({
             <button
               type="button"
               onClick={() => handleQuickFill('teacher')}
-              className="text-emerald-700 hover:text-emerald-800 hover:underline font-medium"
+              className="text-emerald-700 hover:text-emerald-800 hover:underline font-medium cursor-pointer"
             >
               معلم تجريبي
             </button>
           </div>
+        </div>
+
+        {/* Student Copyright & Development Credit */}
+        <div className="mt-4 pt-3 border-t border-stone-100 text-center text-[10px] text-stone-400">
+          <span>إعداد وتطوير طلاب الصف العاشر: </span>
+          <strong className="text-stone-600 font-semibold">هشام بن إسحاق الرحبي</strong> ·{' '}
+          <strong className="text-stone-600 font-semibold">يعرب بن بدر الدغيشي</strong> ·{' '}
+          <strong className="text-stone-600 font-semibold">حسن بن يعقوب البطراني</strong>
         </div>
       </div>
     </div>

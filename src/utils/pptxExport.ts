@@ -6,7 +6,7 @@ export async function exportLessonToPPTX(lesson: LessonContent, unit: Unit): Pro
 
   // Set presentation properties
   pptx.layout = 'LAYOUT_16x9';
-  pptx.author = 'وزارة التربية والتعليم - مناهج الفنون الموسيقية';
+  pptx.author = 'طلاب الصف العاشر: هشام بن إسحاق الرحبي، يعرب بن بدر الدغيشي، حسن بن يعقوب البطراني';
   pptx.company = 'منصة الفنون الموسيقية - الصف العاشر';
   pptx.subject = lesson.title;
   pptx.title = `${lesson.title} - ${unit.title}`;
@@ -60,13 +60,14 @@ export async function exportLessonToPPTX(lesson: LessonContent, unit: Unit): Pro
   });
 
   // Footer metadata
-  slide1.addText('عرض تقديمي تفاعلي جاهز للشرح الصفي والتعليم الذاتي', {
+  slide1.addText('إعداد وتصميم طلاب الصف العاشر: هشام بن إسحاق الرحبي · يعرب بن بدر الدغيشي · حسن بن يعقوب البطراني', {
     x: 0.8,
     y: 4.8,
     w: 8.5,
     h: 0.4,
     fontSize: 12,
-    color: '78716C',
+    color: 'D97706',
+    bold: true,
     rtlMode: true,
     align: 'right',
   });
@@ -224,7 +225,7 @@ export async function exportLessonToPPTX(lesson: LessonContent, unit: Unit): Pro
 
   endSlide.addText('تم بحمد الله وتوفيقه', {
     x: 0.8,
-    y: 1.8,
+    y: 1.6,
     w: 8.5,
     h: 0.8,
     fontSize: 28,
@@ -234,13 +235,25 @@ export async function exportLessonToPPTX(lesson: LessonContent, unit: Unit): Pro
     align: 'center',
   });
 
-  endSlide.addText('يمكنكم متابعة التطبيقات العملية والمقاطع المرئية داخل المنصة التفاعلية', {
+  endSlide.addText('إعداد وتطوير طلاب الصف العاشر:\nهشام بن إسحاق الرحبي  ·  يعرب بن بدر الدغيشي  ·  حسن بن يعقوب البطراني', {
     x: 0.8,
-    y: 2.8,
+    y: 2.5,
     w: 8.5,
-    h: 0.6,
+    h: 0.8,
     fontSize: 16,
     color: 'D97706',
+    bold: true,
+    rtlMode: true,
+    align: 'center',
+  });
+
+  endSlide.addText('جميع الحقوق محفوظة © لمنصة الفنون الموسيقية التفاعلية', {
+    x: 0.8,
+    y: 3.5,
+    w: 8.5,
+    h: 0.5,
+    fontSize: 12,
+    color: 'A8A29E',
     rtlMode: true,
     align: 'center',
   });

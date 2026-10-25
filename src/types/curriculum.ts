@@ -31,6 +31,7 @@ export interface LessonContent {
   }[];
   interactiveToolType: 'bass-clef' | 'scales' | 'triads' | 'mawlid-melody' | 'omani-instruments' | 'romantic-verdi' | 'piano-practice';
   defaultVideoUrl: string;
+  videoWatchUrl?: string;
   videoTitle: string;
   videoDescription: string;
   presentationOutline: {
